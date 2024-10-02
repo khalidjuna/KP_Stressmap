@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
+// import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import Layout from './Layout';
+import axiosInstance from '../../../Utils/AxiosUtil';
 
 const UploadData = () => {
   const [file, setFile] = useState(null);
@@ -35,8 +36,8 @@ const UploadData = () => {
     const formData = new FormData();
     formData.append("file", file);
 
-    axios
-      .post("http://localhost:5002/api/v1/import-csv", formData, {
+    axiosInstance
+      .post("/stressmap/api/v1/import-csv", formData, {
         onUploadProgress: (progressEvent) => {
           const progress = Math.round((progressEvent.loaded * 100) / progressEvent.total);
           setUploadProgress(progress);

@@ -17,6 +17,7 @@ import ScaleBar from "@arcgis/core/widgets/ScaleBar";
 import Measurement from "@arcgis/core/widgets/Measurement";
 
 import Button from "./Button.jsx";
+import axiosInstance from "../../Utils/AxiosUtil.jsx";
 
 const Maps = () => {
   const mapDiv = useRef(null);
@@ -32,7 +33,7 @@ const Maps = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:5002/api/v1/points`);
+        const response = await axiosInstance.get(`/stressmap/api/v1/points`);
         const result = response.data;
         console.log("Fetched data:", result);
 

@@ -2,10 +2,11 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
-import axios from "axios";
+// import axios from "axios";
 import * as AuthService from "../../Services/AuthService.jsx";
 import store from "../../store";
 import "bootstrap/dist/css/bootstrap.min.css";
+import axiosInstance from "../../Utils/AxiosUtil.jsx";
 
 const RegisterPage = () => {
   const navigate = useNavigate();
@@ -43,8 +44,8 @@ const RegisterPage = () => {
     }
 
     try {
-      const response = await axios.post(
-        "http://localhost:5002/api/v1/users",
+      const response = await axiosInstance.post(
+        "/stressmap/api/auth/v1/register",
         formData,
         {
           headers: {

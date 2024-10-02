@@ -17,7 +17,7 @@ handler         : login
   "token": "dshfdsfekhdkhfd"
 }
  */
-import axios from "../Utils/AxiosUtil.jsx";
+import axiosInstance from "../Utils/AxiosUtil.jsx";
 
 export const register = async ({
   role_id,
@@ -31,7 +31,7 @@ export const register = async ({
   country,
   image_url,
 }) => {
-  const result = await axios.post("/api/auth/v1/register", {
+  const result = await axiosInstance.post("/api/auth/v1/register", {
     role_id,
     name,
     email,
@@ -67,7 +67,7 @@ export const register = async ({
 };
 
 export const login = async ({ email, password }) => {
-  const result = await axios.post("/api/auth/v1/login", {
+  const result = await axiosInstance.post("/api/auth/v1/login", {
     email,
     password,
   });
@@ -95,7 +95,7 @@ export const login = async ({ email, password }) => {
 };
 
 export const init = async (setStore) => {
-  const result = await axios.get(`/api/auth/v1/init`);
+  const result = await axiosInstance.get(`/api/auth/v1/init`);
 
   if (result.success) {
     // success...
@@ -115,7 +115,7 @@ export const init = async (setStore) => {
 };
 
 export const logout = async () => {
-  const result = await axios.delete("/api/auth/v1/logout");
+  const result = await axiosInstance.delete("/api/auth/v1/logout");
 
   if (result.success) {
     // success...

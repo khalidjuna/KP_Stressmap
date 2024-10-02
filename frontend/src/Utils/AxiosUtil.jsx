@@ -1,9 +1,9 @@
 import axios from "axios";
 
-import { hostname } from "../consts.jsx";
+// import { hostname } from "../consts.jsx";
 
 const axiosInstance = axios.create();
-axiosInstance.defaults.baseURL = hostname;
+axiosInstance.defaults.baseURL = `https://riset.its.ac.id/stressmap`;
 
 axiosInstance.interceptors.request.use(async (request) => {
   const token = localStorage.getItem("token");

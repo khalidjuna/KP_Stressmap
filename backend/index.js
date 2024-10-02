@@ -23,7 +23,7 @@ app.use(express.json());
 app.use(bodyParser.json());
 
 // Setup mongoose connection
-mongoose.connect('mongodb://localhost:27017/stressmap_db', {
+mongoose.connect('mongodb://10.199.13.228:27017/stressmap_db', {
 });
 
 const db = mongoose.connection;
