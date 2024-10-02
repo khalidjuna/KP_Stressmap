@@ -1,5 +1,5 @@
-import { isDEV, ServerPort } from "./env.js";
+import { isDEV, ServerPort, HostName } from "./env.js";
 
 export const hostname = isDEV
   ? `http://${["localhost", ServerPort].join(":")}`
-  : "";
+  : HostName;
