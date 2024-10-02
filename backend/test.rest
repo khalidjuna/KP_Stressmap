@@ -1,0 +1,28 @@
+GET http://localhost:5002/api/v1/points
+###
+GET http://localhost:5002/api/v1/user/66b0817cb1a2fe6b8406df08
+###
+DELETE http://localhost:5002/api/v1/user/66b0817cb1a2fe6b8406df08
+###
+POST http://localhost:5002/api/v1/users
+Content-Type: application/json
+
+{   "role_id": "66eae19726499a5597024598",
+    "name": "ucup",
+    "email": "ucup@gmail.com",
+    "password": "gampang",
+    "confirmPassword": "gampang",
+    "position": "staff",
+    "institution": "PT.Astra",
+    "city": "Surabaya",
+    "country": "Indonesia",
+    "image_url": "image.jpg"
+}
+
+###
+PUT http://localhost:5002/api/v1/user/66b07852ed0f699201d67f6d
+Content-Type: application/json
+
+{
+    "name": "Cholid Junoto"
+}
