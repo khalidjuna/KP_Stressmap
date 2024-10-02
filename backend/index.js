@@ -33,12 +33,12 @@ db.once('open', () => {
 });
 
 // Routes
-app.use('/api', CsvRoute);
-app.use('/api', PointsRoute);
-app.use('/api', UserRoute);
-app.use('/api', AuthRoute);
-app.use('/api', ImageRoute);
-app.use('/api', RoleRoute);
+app.use('/stressmap/api', CsvRoute);
+app.use('/stressmap/api', PointsRoute);
+app.use('/stressmap/api', UserRoute);
+app.use('/stressmap/api', AuthRoute);
+app.use('/stressmap/api', ImageRoute);
+app.use('/stressmap/api', RoleRoute);
 
 // API endpoint to store GeoJSON data
 app.post('/api/v1/geodata', async (req, res) => {
