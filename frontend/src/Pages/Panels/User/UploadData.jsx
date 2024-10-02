@@ -37,7 +37,7 @@ const UploadData = () => {
     formData.append("file", file);
 
     axiosInstance
-      .post("/stressmap/api/v1/import-csv", formData, {
+      .post("/api/v1/import-csv", formData, {
         onUploadProgress: (progressEvent) => {
           const progress = Math.round((progressEvent.loaded * 100) / progressEvent.total);
           setUploadProgress(progress);

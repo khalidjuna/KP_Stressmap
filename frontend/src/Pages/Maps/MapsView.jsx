@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import axios from "axios";
+// import axios from "axios";
 
 // Core
 import MapView from "@arcgis/core/views/MapView";
@@ -14,6 +14,7 @@ import ScaleBar from "@arcgis/core/widgets/ScaleBar";
 import Measurement from "@arcgis/core/widgets/Measurement";
 
 import Watermark from "./Watermark";
+import axiosInstance from "../../Utils/AxiosUtil";
 
 const MapsView = () => {
   const mapDiv = useRef(null);
@@ -26,7 +27,7 @@ const MapsView = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:5002/api/v1/points`);
+        const response = await axiosInstance.get(`/api/v1/points`);
         const result = response.data;
         console.log("Fetched data:", result);
 

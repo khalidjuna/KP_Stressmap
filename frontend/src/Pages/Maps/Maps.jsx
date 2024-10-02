@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import axios from "axios";
+// import axios from "axios";
 
 // Core
 import MapView from "@arcgis/core/views/MapView";
@@ -33,7 +33,7 @@ const Maps = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axiosInstance.get(`/stressmap/api/v1/points`);
+        const response = await axiosInstance.get(`/api/v1/points`);
         const result = response.data;
         console.log("Fetched data:", result);
 

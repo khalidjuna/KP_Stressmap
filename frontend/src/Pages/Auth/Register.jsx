@@ -45,7 +45,7 @@ const RegisterPage = () => {
 
     try {
       const response = await axiosInstance.post(
-        "/stressmap/api/auth/v1/register",
+        "/api/auth/v1/register",
         formData,
         {
           headers: {

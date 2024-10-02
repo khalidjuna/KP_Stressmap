@@ -13,7 +13,8 @@ const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  // const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [setIsLoggedIn] = useState(false);
   const [forgotPasswordClicked, setForgotPasswordClicked] = useState(false);
   const [showLoginSuccessPopup, setShowLoginSuccessPopup] = useState(false);
 
