@@ -19,7 +19,7 @@ const Navbar = () => {
   return (
     <nav style={styles.navbar}>
       <div style={styles.logo}>
-        <img style={styles.logoImage} src="logo.png" alt="Logo" />
+        <img style={styles.logoImage} src="/stressmap/logo.png" alt="Logo" />
       </div>
       <h1 style={styles.stressMap}>Stress Map</h1>
       <ul style={styles.navLinks}>

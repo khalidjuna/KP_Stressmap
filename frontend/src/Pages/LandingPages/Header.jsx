@@ -72,7 +72,7 @@ const Header = () => {
   return (
     <header style={headerStyles.header}>
       <div style={{ display: "flex", alignItems: "center" }}>
-        <img src="/logo.png" alt="Logo" style={headerStyles.logo} />
+        <img src="/stressmap/logo.png" alt="Logo" style={headerStyles.logo} />
         <div style={headerStyles.title}>Stress Map</div>
       </div>
       <nav>

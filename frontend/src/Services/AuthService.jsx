@@ -31,7 +31,7 @@ export const register = async ({
   country,
   image_url,
 }) => {
-  const result = await axiosInstance.post("/api/auth/v1/register", {
+  const result = await axiosInstance.post("/api/v1/register", {
     role_id,
     name,
     email,
@@ -67,7 +67,7 @@ export const register = async ({
 };
 
 export const login = async ({ email, password }) => {
-  const result = await axiosInstance.post("/api/auth/v1/login", {
+  const result = await axiosInstance.post("/api/v1/login", {
     email,
     password,
   });
