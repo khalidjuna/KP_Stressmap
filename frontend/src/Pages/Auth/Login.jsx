@@ -26,7 +26,7 @@ const LoginPage = () => {
         await AuthService.init(setStore);
         setIsLoggedIn(true);
         setShowLoginSuccessPopup(true);
-        navigate("/stressmap/user/dashboard");
+        // navigate("/stressmap/user/dashboard");
       } else {
         setErrorMessage("Login failed. Please check your credentials.");
       }
