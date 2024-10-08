@@ -22,5 +22,5 @@ v1.post("/login", login);
 v1.get("/init", useToken, canAccess(["Super Admin", "Admin", "User"]), init);
 v1.delete("/logout", useToken, logout);
 
-router.use("/v1", v1);
+router.use("/auth/v1", v1);
 export default router;
